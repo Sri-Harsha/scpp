@@ -1,0 +1,552 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://schema.org/",
+        "citeAs": "cr:citeAs",
+        "column": "cr:column",
+        "conformsTo": "dct:conformsTo",
+        "cr": "http://mlcommons.org/croissant/",
+        "data": {
+            "@id": "cr:data",
+            "@type": "@json"
+        },
+        "dataBiases": "cr:dataBiases",
+        "dataCollection": "cr:dataCollection",
+        "dataType": {
+            "@id": "cr:dataType",
+            "@type": "@vocab"
+        },
+        "dct": "http://purl.org/dc/terms/",
+        "extract": "cr:extract",
+        "field": "cr:field",
+        "fileProperty": "cr:fileProperty",
+        "fileObject": "cr:fileObject",
+        "fileSet": "cr:fileSet",
+        "format": "cr:format",
+        "includes": "cr:includes",
+        "isLiveDataset": "cr:isLiveDataset",
+        "jsonPath": "cr:jsonPath",
+        "key": "cr:key",
+        "md5": "cr:md5",
+        "parentField": "cr:parentField",
+        "path": "cr:path",
+        "personalSensitiveInformation": "cr:personalSensitiveInformation",
+        "recordSet": "cr:recordSet",
+        "references": "cr:references",
+        "regex": "cr:regex",
+        "repeated": "cr:repeated",
+        "replace": "cr:replace",
+        "sc": "https://schema.org/",
+        "separator": "cr:separator",
+        "source": "cr:source",
+        "subField": "cr:subField",
+        "transform": "cr:transform"
+    },
+    "@type": "sc:Dataset",
+    "distribution": [
+        {
+            "@type": "cr:FileObject",
+            "@id": "repo",
+            "name": "repo",
+            "description": "The Hugging Face git repository.",
+            "contentUrl": "https://huggingface.co/datasets/Aman-J/SugarCrepe_pp/tree/refs%2Fconvert%2Fparquet",
+            "encodingFormat": "git+https",
+            "sha256": "https://github.com/mlcommons/croissant/issues/80"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-replace_attribute",
+            "name": "parquet-files-for-config-replace_attribute",
+            "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/datasets-server/parquet).",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "replace_attribute/*/*.parquet"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-replace_object",
+            "name": "parquet-files-for-config-replace_object",
+            "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/datasets-server/parquet).",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "replace_object/*/*.parquet"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-replace_relation",
+            "name": "parquet-files-for-config-replace_relation",
+            "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/datasets-server/parquet).",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "replace_relation/*/*.parquet"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-swap_atribute",
+            "name": "parquet-files-for-config-swap_atribute",
+            "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/datasets-server/parquet).",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "swap_atribute/*/*.parquet"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-swap_object",
+            "name": "parquet-files-for-config-swap_object",
+            "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/datasets-server/parquet).",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "swap_object/*/*.parquet"
+        }
+    ],
+    "recordSet": [
+        {
+            "@type": "cr:RecordSet",
+            "@id": "replace_attribute",
+            "name": "replace_attribute",
+            "description": "Aman-J/SugarCrepe_pp - 'replace_attribute' subset",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_attribute/caption",
+                    "name": "replace_attribute/caption",
+                    "description": "Column 'caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_attribute"
+                        },
+                        "extract": {
+                            "column": "caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_attribute/id",
+                    "name": "replace_attribute/id",
+                    "description": "Column 'id' from the Hugging Face parquet file.",
+                    "dataType": "sc:Integer",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_attribute"
+                        },
+                        "extract": {
+                            "column": "id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_attribute/filename",
+                    "name": "replace_attribute/filename",
+                    "description": "Column 'filename' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_attribute"
+                        },
+                        "extract": {
+                            "column": "filename"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_attribute/caption2",
+                    "name": "replace_attribute/caption2",
+                    "description": "Column 'caption2' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_attribute"
+                        },
+                        "extract": {
+                            "column": "caption2"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_attribute/negative_caption",
+                    "name": "replace_attribute/negative_caption",
+                    "description": "Column 'negative_caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_attribute"
+                        },
+                        "extract": {
+                            "column": "negative_caption"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "cr:RecordSet",
+            "@id": "replace_object",
+            "name": "replace_object",
+            "description": "Aman-J/SugarCrepe_pp - 'replace_object' subset",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_object/caption2",
+                    "name": "replace_object/caption2",
+                    "description": "Column 'caption2' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_object"
+                        },
+                        "extract": {
+                            "column": "caption2"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_object/negative_caption",
+                    "name": "replace_object/negative_caption",
+                    "description": "Column 'negative_caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_object"
+                        },
+                        "extract": {
+                            "column": "negative_caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_object/caption",
+                    "name": "replace_object/caption",
+                    "description": "Column 'caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_object"
+                        },
+                        "extract": {
+                            "column": "caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_object/filename",
+                    "name": "replace_object/filename",
+                    "description": "Column 'filename' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_object"
+                        },
+                        "extract": {
+                            "column": "filename"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_object/id",
+                    "name": "replace_object/id",
+                    "description": "Column 'id' from the Hugging Face parquet file.",
+                    "dataType": "sc:Integer",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_object"
+                        },
+                        "extract": {
+                            "column": "id"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "cr:RecordSet",
+            "@id": "replace_relation",
+            "name": "replace_relation",
+            "description": "Aman-J/SugarCrepe_pp - 'replace_relation' subset",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_relation/negative_caption",
+                    "name": "replace_relation/negative_caption",
+                    "description": "Column 'negative_caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_relation"
+                        },
+                        "extract": {
+                            "column": "negative_caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_relation/caption",
+                    "name": "replace_relation/caption",
+                    "description": "Column 'caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_relation"
+                        },
+                        "extract": {
+                            "column": "caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_relation/filename",
+                    "name": "replace_relation/filename",
+                    "description": "Column 'filename' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_relation"
+                        },
+                        "extract": {
+                            "column": "filename"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_relation/id",
+                    "name": "replace_relation/id",
+                    "description": "Column 'id' from the Hugging Face parquet file.",
+                    "dataType": "sc:Integer",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_relation"
+                        },
+                        "extract": {
+                            "column": "id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "replace_relation/caption2",
+                    "name": "replace_relation/caption2",
+                    "description": "Column 'caption2' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-replace_relation"
+                        },
+                        "extract": {
+                            "column": "caption2"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "cr:RecordSet",
+            "@id": "swap_atribute",
+            "name": "swap_atribute",
+            "description": "Aman-J/SugarCrepe_pp - 'swap_atribute' subset",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_atribute/id",
+                    "name": "swap_atribute/id",
+                    "description": "Column 'id' from the Hugging Face parquet file.",
+                    "dataType": "sc:Integer",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_atribute"
+                        },
+                        "extract": {
+                            "column": "id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_atribute/caption",
+                    "name": "swap_atribute/caption",
+                    "description": "Column 'caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_atribute"
+                        },
+                        "extract": {
+                            "column": "caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_atribute/caption2",
+                    "name": "swap_atribute/caption2",
+                    "description": "Column 'caption2' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_atribute"
+                        },
+                        "extract": {
+                            "column": "caption2"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_atribute/negative_caption",
+                    "name": "swap_atribute/negative_caption",
+                    "description": "Column 'negative_caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_atribute"
+                        },
+                        "extract": {
+                            "column": "negative_caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_atribute/filename",
+                    "name": "swap_atribute/filename",
+                    "description": "Column 'filename' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_atribute"
+                        },
+                        "extract": {
+                            "column": "filename"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "cr:RecordSet",
+            "@id": "swap_object",
+            "name": "swap_object",
+            "description": "Aman-J/SugarCrepe_pp - 'swap_object' subset",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_object/caption",
+                    "name": "swap_object/caption",
+                    "description": "Column 'caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_object"
+                        },
+                        "extract": {
+                            "column": "caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_object/caption2",
+                    "name": "swap_object/caption2",
+                    "description": "Column 'caption2' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_object"
+                        },
+                        "extract": {
+                            "column": "caption2"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_object/id",
+                    "name": "swap_object/id",
+                    "description": "Column 'id' from the Hugging Face parquet file.",
+                    "dataType": "sc:Integer",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_object"
+                        },
+                        "extract": {
+                            "column": "id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_object/negative_caption",
+                    "name": "swap_object/negative_caption",
+                    "description": "Column 'negative_caption' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_object"
+                        },
+                        "extract": {
+                            "column": "negative_caption"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "swap_object/filename",
+                    "name": "swap_object/filename",
+                    "description": "Column 'filename' from the Hugging Face parquet file.",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-swap_object"
+                        },
+                        "extract": {
+                            "column": "filename"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "conformsTo": "http://mlcommons.org/croissant/1.0",
+    "name": "SugarCrepe_pp",
+    "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for SugarCrepe++\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Details\n\t\n\nSugarCrepe++ allows us to analyze the sensitivity of VLMs and ULMs to lexical and semantic alterations. The instances from SugarCrepe++ dataset represent images from MS-COCO\nand their associated text captions, negative captions from SugarCrepe and newly\nintroduced positive captions.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Description\n\t\n\nDespite their remarkable successes, state-of-the-art large language models (LLMs),\nincluding… See the full description on the dataset page: https://huggingface.co/datasets/Aman-J/SugarCrepe_pp.",
+    "alternateName": [
+        "Aman-J/SugarCrepe_pp",
+        "SugarCrepe++"
+    ],
+    "creator": {
+        "@type": "Person",
+        "name": "Aman Jaiswal",
+        "url": "https://huggingface.co/Aman-J"
+    },
+    "keywords": [
+        "sentence-similarity",
+        "1K<n<10K",
+        "English",
+        "cc-by-4.0",
+        "Croissant",
+        "arxiv:2306.14610",
+        "🇺🇸 Region: US"
+    ],
+    "license": "https://choosealicense.com/licenses/cc-by-4.0/",
+    "url": "https://huggingface.co/datasets/Aman-J/SugarCrepe_pp"
+}
