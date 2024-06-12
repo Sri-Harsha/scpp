@@ -12,15 +12,15 @@ We evaluate a comprehensive list of Vision-Language Models (VLMs) on SUGARCREPE+
 
 ## Unimodal Language model evaluation in SUGARCREPE++
 
-We designed SUGARCREPE++ dataset such that the overlap of semantic information between the two positive captions is always higher than between the positive and negative captions, even without considering the image. We use the text-only task (TOT) metric for ULMs as defined in the paper.
+We designed the SUGARCREPE++ dataset such that the overlap of semantic information between the two positive captions is always higher than between the positive and negative captions, even without considering the image. We use the text-only task (TOT) metric for ULMs as defined in the paper.
 
 ULMs can be evaluated with the following steps:
 
-1. Setting up the python environment for ULMs:
+1. Setting up the Python environment for ULMs:
 
    `pip install -r ulm-requirements.txt`
 
-3. This will download and evaluate models that can be run on a medium sized GPU.
+3. This will download and evaluate models that can be run on a medium-sized GPU.
 
    `python evaluate_ulms.py --data_dir data --models modelset1`
 
@@ -28,13 +28,13 @@ ULMs can be evaluated with the following steps:
 
    `python evaluate_ulms.py --data_dir data --models modelset2 modelset3`
 
-> Note: For Llama model, you need to request access from here [here](https://llama.meta.com/llama-downloads/); more info can be found [here](https://huggingface.co/SeanLee97/angle-llama-7b-nli-v2).
+> Note: For the Llama model, you need to request access from here [here](https://llama.meta.com/llama-downloads/); more info can be found [here](https://huggingface.co/SeanLee97/angle-llama-7b-nli-v2).
 
-4. For help use, `python evaluate_ulms.py --help`
-5. The ULM evaluation run will generate the following in the currect directory.
+4. For help, use `python evaluate_ulms.py --help`
+5. The ULM evaluation run will generate the following in the current directory.
     * Files:
         * `ulm_results.log` contains the results of the evaluation.
-        * `ulm_model_stats.log` contain model size and embedding size information of the evaluated ULMs.
+        * `ulm_model_stats.log` contains model size and embedding size information of the evaluated ULMs.
     * Directory:
         * `ulm-results` contains pickle files with the sample-wise and aggregate results for each model/dataset.
         * `ulm_model_data` contains the downloaded weights from huggingface. This may be modified by changing the `CACHE_DIR` in evalute\_ulms.py
@@ -46,7 +46,7 @@ ULMs can be evaluated with the following steps:
 
 We generate an extra caption using the Mistral model and human validate the generated captions.
 
-The steps to generate extra postive captions are shown below:
+The steps to generate extra positive captions are shown below:
 
 1. Download the original SUGARCREPE dataset from [here](https://github.com/RAIVNLab/sugar-crepe/tree/main/data).
 2. Download the mistral-7b model [here](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1).
@@ -54,15 +54,15 @@ The steps to generate extra postive captions are shown below:
 
     `python generate_sugarcrepe_plus-mistral.py --data_dir {directory to original sugarcrepe}`
 
-4. The scripts will run both the stages of generation pipeline and create a new directory called `data/sugarcrepe-plus-plus-mistral` with outputs from both the stages. The 'checked\_caption' are automatic validated captions which are further considered for human validation.
+4. The scripts will run both stages of the generation pipeline and create a new directory called `data/sugarcrepe-plus-plus-mistral` with outputs from both stages. The 'checked\_caption' are automatically validated captions which are further considered for human validation.
 
-> Note: Further human validation would be required to match the quality of SUGARCREPE++. The above output files would be similar in quality as files in `generated_data`.
+> Note: Further human validation would be required to match the quality of SUGARCREPE++. The above output files would be similar in quality to files in `generated_data`.
 
 - - -
 
 ### Contact
 
-For further assistance email: 
+For further assistance, email: 
 
 *aman.jaiswal@dal.ca*
 
