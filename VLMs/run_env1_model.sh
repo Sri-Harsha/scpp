@@ -13,7 +13,7 @@ python3 test_BLIP_SGVL.py > log/BLIP_SGVL.txt
 
 python3 test_FLAVA.py > log/FLAVA.txt
 
-python3 test_NegCLIP.py > NegCLIP.txt
+python3 test_NegCLIP.py > log/NegCLIP.txt
 
 python3 test_ViLT.py > log/ViLT.txt
 
