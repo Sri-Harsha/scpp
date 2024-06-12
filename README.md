@@ -8,7 +8,7 @@ and lexical variation.
 
 ## Vision-Language model evaluation on SUGARCREPE++
 
-We evaluate a comprehensive list of Vision-Language Models (VLMs) on SUGARCREPE++. We evaluate VLMs under two different settings: (1) image-text task (ITT) and (2) text-only task (TOT). As explained in our paper, in ITT, both the image and the corresponding triplet of captions (two positive captions and one negative caption) are provided as input. In TOT, only the text encoder of the VLMs is evaluated using the triplet of captions. Please refer to the `README_VLMs.md` in the VLMs folder for the steps to reproduce the results in the paper.
+We evaluate a comprehensive list of Vision-Language Models (VLMs) on SUGARCREPE++. We evaluate VLMs under two different settings: (1) image-text task (ITT) and (2) text-only task (TOT). As explained in our paper, in ITT, both the image and the corresponding triplet of captions (two positive captions and one negative caption) are provided as input. In TOT, only the text encoder of the VLMs is evaluated using the triplet of captions. Please refer to the `VLMs/README.md` in the VLMs folder for the steps to reproduce the results in the paper.
 
 ## Unimodal Language model evaluation in SUGARCREPE++
 
