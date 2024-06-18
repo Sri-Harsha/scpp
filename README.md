@@ -39,7 +39,7 @@ ULMs can be evaluated with the following steps:
         * `ulm_model_stats.log` contains model size and embedding size information of the evaluated ULMs.
     * Directory:
         * `ulm-results` contains pickle files with the sample-wise and aggregate results for each model/dataset.
-        * `ulm_model_data` contains the downloaded weights from huggingface. This may be modified by changing the `CACHE_DIR` in evalute\_ulms.py
+        * `ulm_model_data` contains the downloaded weights from huggingface. This may be modified by changing the `CACHE_DIR` in evaluate\_ulms.py
 6. To summarize results of a previous run that is stored in `DIR`, run the following command.
 
     `python -c 'from evaluate_ulms import summarize_results; print(summarize_results("DIR"))'`
