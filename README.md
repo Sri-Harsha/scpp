@@ -1,8 +1,7 @@
 # SUGARCREPE++
 <br>
 The SUGARCREPE++ dataset is created to evaluate the sensitivity of vision language models (VLMs) and unimodal language models (ULMs) to semantic and lexical alterations. The SUGARCREPE dataset consists of (only) one positive and one hard negative caption for each image. Relative to the negative caption, a single positive caption can either have low or high lexical overlap. The original SUGARCREPE only captures the high overlap case. To evaluate the sensitivity of encoded semantics to lexical alteration, we require an additional positive caption with a different lexical composition. SUGARCREPE++ fills this gap by adding an additional positive caption enabling a more thorough assessment of models’ abilities to handle semantic content
-and lexical variation.
-
+and lexical variation.<br /> <br /> 
 
 :point_right: We also host the SUGARCREPE++ dataset in huggingface dataset [here](https://huggingface.co/datasets/Aman-J/SugarCrepe_pp).
 
@@ -44,7 +43,7 @@ ULMs can be evaluated with the following steps:
 
 ## SUGARCREPE++ Generation Pipeline
 
-We generate an extra caption using the Mistral model and human validate the generated captions.
+We generate an extra caption using the Mistral model and human-validate the generated captions.
 
 The steps to generate extra positive captions are shown below:
 
@@ -67,6 +66,18 @@ For further assistance, email:
 *aman.jaiswal@dal.ca*
 
 *sriharsha.d@dal.ca*
+
+### 📎 Citation
+```bibtex
+@misc{dumpala2024sugarcrepe,
+    title={SUGARCREPE++ Dataset: Vision-Language Model Sensitivity to Semantic and Lexical Alterations},
+    author={Sri Harsha Dumpala and Aman Jaiswal and Chandramouli Sastry and Evangelos Milios and Sageev Oore and Hassan Sajjad},
+    year={2024},
+    eprint={2406.11171},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
 
 ### License
 
